@@ -106,7 +106,12 @@ public class App {
             tokenizer = new Tokenizer(iter);
             analyser.setTokenizer(tokenizer);
 
-    
+        
+            try {
+                analyser.analyseProgram();
+            } catch (Exception e) {
+                System.exit(1);
+            }
         
             var outPutter = new OutPutter(analyser);
         
