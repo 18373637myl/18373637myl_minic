@@ -136,7 +136,7 @@ public final class Analyser {
 
         //debug
        symbolTableList.print();
-       throw new AnalyzeError(ErrorCode.DuplicateDeclaration, name.getStartPos());
+       throw new AnalyzeError(ErrorCode.DuplicateDeclaration, peek().getStartPos());
     }
 
 /*------------------------------------Function------------------------------------- */
