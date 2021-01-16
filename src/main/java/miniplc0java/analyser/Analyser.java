@@ -354,7 +354,6 @@ public final class Analyser {
         int tempbreakins = breakins;
         int tempcontinueins = continueins;
         expect(TokenType.WHILE_KW);
-        throw new AnalyzeError(ErrorCode.InvalidType, peek().getStartPos());
         continueins = func.instructionList.size();
         analyseB();
 
