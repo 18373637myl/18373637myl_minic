@@ -55,9 +55,9 @@ public class Tokenizer {
     	}
     	if(it.peekChar()!='.')
     		return new Token(TokenType.UINT_LITERAL, tempInt ,tempBegin ,it.currentPos());
-    	
+    	else return null ;
 
-    	it.nextChar();
+    	/*it.nextChar();
     	double tempDouble = (double)tempInt;
     	double k = 1.0 / 10;
     	while(Character.isDigit(it.peekChar())) {
@@ -92,7 +92,7 @@ public class Tokenizer {
     	else {
 
     	}
-    	return new Token(TokenType.DOUBLE_LITERAL, tempDouble, tempBegin, it.currentPos());
+    	return new Token(TokenType.DOUBLE_LITERAL, tempDouble, tempBegin, it.currentPos());*/
     }
     
 
@@ -139,7 +139,7 @@ public class Tokenizer {
     	it.nextChar();
 
     	if(it.peekChar() == '\\') {
-    		//it.nextChar();
+    		it.nextChar();
     		char tempchar = it.peekChar();
     		
 			if(tempchar == '\\' || tempchar == '\"' || tempchar == '\'' || tempchar == 'n'
@@ -241,9 +241,9 @@ public class Tokenizer {
 	        case '*':
 	            return new Token(TokenType.MUL, "*", tempBegin, it.currentPos());
 			case '/':
-				if(it.peekChar() == '/'){
+				/*if(it.peekChar() == '/'){
 					return lexComment();
-				}
+				}*/
 	        	return new Token(TokenType.DIV, "/", tempBegin, it.currentPos());
 	        	
 	        case '=':
