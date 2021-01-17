@@ -53,7 +53,7 @@ public class Tokenizer {
     	while(Character.isDigit(it.peekChar())) {
     		tempInt = tempInt * 10 + it.nextChar() - 48;
     	}
-    	/*if(it.peekChar()!='.')
+    	if(it.peekChar()!='.')
     		return new Token(TokenType.UINT_LITERAL, tempInt ,tempBegin ,it.currentPos());
     	
 
@@ -91,8 +91,8 @@ public class Tokenizer {
     	}
     	else {
 
-    	}*/
-    	return new Token(TokenType.DOUBLE_LITERAL, 0, tempBegin, it.currentPos());
+    	}
+    	return new Token(TokenType.DOUBLE_LITERAL, tempDouble, tempBegin, it.currentPos());
     }
     
 
