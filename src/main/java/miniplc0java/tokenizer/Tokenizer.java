@@ -92,7 +92,7 @@ public class Tokenizer {
     	else {
 
     	}*/
-    	return new Token(TokenType.DOUBLE_LITERAL, tempDouble, tempBegin, it.currentPos());
+    	return new Token(TokenType.DOUBLE_LITERAL, 0, tempBegin, it.currentPos());
     }
     
 
